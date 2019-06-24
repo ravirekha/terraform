@@ -53,7 +53,7 @@ resource "ucloud_instance" "web" {
     security_group = data.ucloud_security_groups.default.security_groups[0].id
 }
 resource "ucloud_eip" "example" {
-    bandwidth            = 2
+    bandwidth            = 4
     charge_mode          = "bandwidth"
     name                 = "tf-example-eip"
     tag                  = "tf-example"
