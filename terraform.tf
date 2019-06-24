@@ -21,6 +21,7 @@ data "ucloud_images" "default" {
 resource "ucloud_security_group" "example" {
     name = "tf-example-security-group"
     tag  = "tf-example-new"
+}
 
     # http access from LAN
     rules {
