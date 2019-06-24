@@ -13,8 +13,8 @@ data "ucloud_security_groups" "default" {
 # Query image
 data "ucloud_images" "default" {
   availability_zone = "cn-bj2-02"
-#  name_regex        = "^CentOS 6.5 64"
-  name_regex        = "^Ubuntu 18.04 64"
+  name_regex        = "^CentOS 6.5 64"
+#  name_regex        = "^Ubuntu 18.04 64"
   image_type        = "base"
 }
 
