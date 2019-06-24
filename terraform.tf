@@ -66,10 +66,3 @@ resource "ucloud_disk" "example" {
     name              = "tf-example-instance"
     disk_size         = 30
 }
-
-# Attach cloud disk to instance
-resource "ucloud_disk_attachment" "example" {
-  availability_zone = "cn-bj2-02"
-  disk_id           = ucloud_disk.example.id
-  instance_id       = ucloud_instance.web.id
-}
