@@ -59,10 +59,3 @@ resource "ucloud_eip" "example" {
     tag                  = "tf-example"
     internet_type        = "bgp"
 }
-
-# Create cloud disk
-resource "ucloud_disk" "example" {
-    availability_zone = "cn-bj2-02"
-    name              = "tf-example-instance"
-    disk_size         = 30
-}
