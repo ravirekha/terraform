@@ -20,7 +20,7 @@ data "ucloud_images" "default" {
 
 resource "ucloud_security_group" "example" {
     name = "tf-example-security-group"
-    tag  = "tf-example-new"
+    tag  = "tf-example-jenkins"
 
     # http access from LAN
     rules {
@@ -47,7 +47,7 @@ resource "ucloud_instance" "web" {
     instance_type     = "n-basic-2"
     root_password     = "wA1234567"
     name              = "tf-example-instance"
-    tag               = "tf-example-new"
+    tag               = "tf-example-jenkins"
 
     # the default Web Security Group that UCloud recommend to users
     security_group = data.ucloud_security_groups.default.security_groups[0].id
@@ -56,6 +56,6 @@ resource "ucloud_eip" "example" {
     bandwidth            = 4
     charge_mode          = "bandwidth"
     name                 = "tf-example-eip"
-    tag                  = "tf-example"
+    tag                  = "tf-example-jenkins"
     internet_type        = "bgp"
 }
