@@ -18,27 +18,6 @@ data "ucloud_images" "default" {
   image_type        = "base"
 }
 
-resource "ucloud_security_group" "example" {
-    name = "tf-example-security-group"
-    tag  = "tf-example-jenkins"
-
-    # http access from LAN
-    rules {
-        port_range = "80"
-        protocol   = "tcp"
-        cidr_block = "10.42.0.0/16"
-        policy     = "accept"
-    }
-
-    # https access from LAN
-    rules {
-        port_range = "443"
-        protocol   = "tcp"
-        cidr_block = "10.42.0.0/16"
-        policy     = "accept"
-    }
-}
-
 
 # Create web instance
 resource "ucloud_instance" "web" {
