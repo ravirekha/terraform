@@ -1,6 +1,6 @@
 provider "ucloud" {
   public_key = "sOBEB+k3WB3eBXiWW0u99jmgkcDxr06yplefuXcE72VMvZFMUxO4ytBuoaM="
-#  public_key = ""
+# public_key = ""
   private_key = "tqYT2FZp2jNDrpFq1L6glpDUJN3nlksNlV0jUE7ZHmI8nkz2dEaLfxUhtf1AvK3S"
  # private_key = ""
   project_id = "org-34em0u"
